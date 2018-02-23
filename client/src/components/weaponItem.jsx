@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Component} from 'react';
 import $ from 'jquery';
 
-const weaponList = (props) => {
+const WeaponList = (props) => {
   const list = props.weapons.map(element => (
     <weaponCard
     src={weapon.image.src}

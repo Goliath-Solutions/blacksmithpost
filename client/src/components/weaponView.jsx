@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Component} from 'react';
 import $ from 'jquery';
 
-class weaponView extends React.Component {
+class WeaponView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,11 +16,12 @@ class weaponView extends React.Component {
       singleWeapon = this.props.weapons.map()
     }
   }
-
+/*
   componentWillMount() {
 
         $.ajax({
       url: '/api/allWeapons',
+      type:"GET"
       dataType: 'json',
       contentType: 'application/json',
       success: function(data) {
@@ -33,9 +34,9 @@ class weaponView extends React.Component {
   };
 
 
+*/
 
 
-  }
 
 
 
@@ -43,14 +44,13 @@ class weaponView extends React.Component {
     return (
       <div className = "bigView">
         <h1>List of Weapons</h1>
+        <p>{this.state.weapons}</p>
 
       </div>)
   }
+
+
 }
-
-}
-
-
 
 
 

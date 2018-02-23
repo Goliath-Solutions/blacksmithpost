@@ -2,6 +2,9 @@ import React from 'react';
 import {render} from 'react-dom';
 import { Router, Route, browserHistory} from 'react-router'
 import WeaponForm from './components/weaponForm.jsx'
+import WeaponView from './components/weaponView.jsx'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 class App extends React.Component {
   constructor(props){
@@ -17,8 +20,10 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-            <h1>Black Smith Post</h1>
+        <Header />
         <WeaponForm />
+
+        <Footer />
 
       </div>
     );
