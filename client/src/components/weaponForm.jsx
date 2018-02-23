@@ -63,7 +63,7 @@ class WeaponForm extends React.Component {
           <h1>weaponForm</h1>
           <form onSubmit={this.handleSubmit}>
         <label>
-          Weapon Type:
+          Weapon Name:
           <input
             name="type"
             type="string"

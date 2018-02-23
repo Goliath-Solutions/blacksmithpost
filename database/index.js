@@ -39,7 +39,7 @@ var armorSchema = mongoose.Schema({
 var weapon = module.exports = mongoose.model('weapon', weaponSchema);
 var armor = module.exports = mongoose.model('armor', armorSchema);
 
-
+//create a weapon listing
 var createWeapon = function (data) {
   console.log('create weapon func starting')
     new weapon({
@@ -55,29 +55,46 @@ var createWeapon = function (data) {
       active: true
     }).save().then(() => console.log("weapon created"));
   }
-
-
-var searchWeapontype = function () {
-   weapon.find();
-
-}
-
-
+// find all weapons
 var allWeapons = function(callback) {
+  //weapon.find takes 200 years
+  //database is releated to async, across network async
   weapon.find(function(err, data) {
     if(err) {
-      callback(err, data);
+      callback(err, null);
     } else {
-      callback(err, data);
+      callback(null, data);
     }
   });
 };
 
 
-function allweapons(callback){
+//modify database functions to be created
+// 1. View functions first
 
-}
+// 2. then delete functions
 
+// 3. update functions
+
+// 4. login
+
+// 5. then armor
+
+var createArmor = function () {}
+
+var allArmor = function () {}
+
+var searchArmorListing = function () {}
+
+var searchWeaponListing= function () {}
+
+var deleteWeapon = function () {}
+
+var deleteArmor = function () {}
+
+var updateWeapon = function () {}
+
+var updateArmor = function () {}
 
 
 
@@ -88,4 +105,4 @@ function allweapons(callback){
 
 module.exports.allWeapons = allWeapons;
 module.exports.createWeapon = createWeapon;
-module.exports.searchWeapontype = searchWeapontype;
+//module.exports.searchWeapontype = searchWeapontype;

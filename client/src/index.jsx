@@ -26,6 +26,13 @@ class App extends React.Component {
 };
 
 
+// set up header
+// set up footer
+//set up router
+//duplicate armor post
+//set up view many item page weapon / armor
+// set up single view item page weapon /armor
+//setup basic login page.
 
 //should all ajax requests be index page can they be on components?
 
