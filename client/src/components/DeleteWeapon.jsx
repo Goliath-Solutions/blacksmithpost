@@ -11,12 +11,16 @@ class DeleteWeapon extends React.Component {
     this.state = {
       deleteitem:'',
     }
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
 
 
-   handleChange(){
-    this.setState({deleteitem: event.target.value});
+   handleChange(event){
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   }
   onSubmit(event){
 
@@ -49,7 +53,7 @@ class DeleteWeapon extends React.Component {
         name="deleteitem"
         type="string"
         value={this.state.deleteitem}
-        onChange={this.handleChange} />
+        onChange={event => this.handlechange(event)} />
         </label>
         </form>
       </div>
