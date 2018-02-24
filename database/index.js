@@ -60,15 +60,27 @@ var allWeapons = function(callback) {
   //weapon.find takes 200 years
   //database is releated to async, across network async
   weapon.find(function(err, data) {
-    if(err) {
+    if (err) {
       callback(err, null);
     } else {
       callback(null, data);
+
     }
-  });
+  }).limit(20)
 };
 
 
+
+var deleteWeapon = function(data,callback){
+  weapon.remove({type: data.type}).then(() =>
+  console.log(data.type+ ' has been deleted database'))
+}
+
+var weaponType = function(data,callback){
+
+weapon.findOne({'type':data.type}).exec(callback);
+
+}
 //modify database functions to be created
 // 1. View functions first
 
@@ -88,7 +100,6 @@ var searchArmorListing = function () {}
 
 var searchWeaponListing= function () {}
 
-var deleteWeapon = function () {}
 
 var deleteArmor = function () {}
 
@@ -102,7 +113,7 @@ var updateArmor = function () {}
 
 
 
-
+module.exports.deleteWeapon = deleteWeapon;
 module.exports.allWeapons = allWeapons;
 module.exports.createWeapon = createWeapon;
 //module.exports.searchWeapontype = searchWeapontype;

@@ -54,6 +54,7 @@ class WeaponForm extends React.Component {
         console.log('errror in ajax', err);
       }
     });
+
   };
 
 
@@ -61,7 +62,7 @@ class WeaponForm extends React.Component {
       return (
         <div className="WeaponForm">
           <h1>weaponForm</h1>
-          <form onSubmit={this.handleSubmit}>
+          <form>
         <label>
           Weapon Name:
           <input
@@ -150,3 +151,11 @@ class WeaponForm extends React.Component {
 
 
 export default WeaponForm;
+
+
+
+
+
+
+
+

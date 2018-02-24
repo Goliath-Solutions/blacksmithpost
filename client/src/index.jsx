@@ -5,15 +5,17 @@ import WeaponForm from './components/weaponForm.jsx'
 import WeaponView from './components/weaponView.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import DeleteWeapon from './components/DeleteWeapon.jsx'
 
 class App extends React.Component {
   constructor(props){
     super(props)
+
     this.state = {
-      weapons:[]
+      weapons:[],
+      deleteitem:''
     }
   }
-
 
 
 
@@ -21,10 +23,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <DeleteWeapon />
         <WeaponForm />
 
         <Footer />
-
+        <WeaponView />
       </div>
     );
   };

@@ -42,11 +42,19 @@ app.get('/api/allWeapons', function (req, res) {
 //request to add item to database
 
 app.post('/api/weaponForm', function (req, res){
-    console.log(req.body +" this req body");
+    console.log(req.body +" this req body weapform");
   database.createWeapon(req.body);
     res.sendStatus(200);
 
 })
+
+
+app.post('/api/deleteWeapon', function (req, res){
+  console.log(req.body.type +" req body delete")
+  database.deleteWeapon(req.body);
+
+  res.sendStatus(200);
+});
 /*
 app.get('/api/allArmor', function (req, res) {})
 app.post('/api/armorForm', function (req, res) {})
