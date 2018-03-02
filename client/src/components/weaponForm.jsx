@@ -61,10 +61,10 @@ class WeaponForm extends React.Component {
     render () {
       return (
         <div className="WeaponForm">
-          <h1>weaponForm</h1>
+          <h1>The Black Smith Post</h1>
           <form>
         <label>
-          Weapon Name:
+          Item's Name:
           <input
             name="type"
             type="string"
@@ -73,7 +73,7 @@ class WeaponForm extends React.Component {
         </label>
         <br />
         <label>
-          Weapon Description:
+           Description:
           <input
             name="description"
             type="string"
@@ -82,7 +82,7 @@ class WeaponForm extends React.Component {
         </label>
         <br />
         <label>
-          Weapon Price:
+           Price:
           <input
             name="cost"
             type="number"
@@ -91,7 +91,7 @@ class WeaponForm extends React.Component {
         </label>
         <br />
         <label>
-          Weapon Condition:
+           Condition:
           <input
             name="condition"
             type="string"
@@ -117,15 +117,6 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </label>
         <br />
-        <label>
-          Image:
-          <input
-            name="image"
-            type="string"
-            value={this.state.image}
-            onChange={e => this.change(e)} />
-        </label>
-        <br />
 
         <label>
           Seller Email:
@@ -136,8 +127,14 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </label>
         <br />
-        List Weapon button:
-          <button onClick={() => this.onSubmit()}>List Weapon</button>
+
+          <div className="form-group">
+          <label for="exampleFormControlFile1">Upload Image</label>
+          <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+          </div>
+        <br />
+        <h4>List thee item my lord:</h4>
+          <button className="btn btn-primary btn-lg active" onClick={() => this.onSubmit()}>List Weapon</button>
       </form>
 
 

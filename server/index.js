@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var database = require('../database/index.js');
+//var history = require('connect-history-api-fallback');
 
 var app = express();
 
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static(__dirname + '/../client/dist'));
-
+//app.use(history());
 
 
 app.post('/api/createWeapon', function (req, res) {

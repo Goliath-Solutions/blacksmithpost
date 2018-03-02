@@ -9,8 +9,6 @@ class WeaponView extends React.Component {
 
     this.state = {
       weapons: [],
-      isLoading: false,
-      singleView: false,
     }
 
 
@@ -31,13 +29,6 @@ class WeaponView extends React.Component {
     })
   };
 */
-  componentDidMount(){
-    this.setState({isLoading: true});
-
-    fetch('/api/allWeapons')
-    .then(response => response.json())
-    .then(data => this.setState({ weapons: data, isloading:false}));
-  }
 
 
 
@@ -46,18 +37,25 @@ class WeaponView extends React.Component {
 
    render () {
     return (
-      <div className = "bigView">
         <h1>List of Weapons</h1>
         <ul>
         {this.state.weapons.map(weapon =>
-          <li key={weapon._id}>
-            <b>type:</b>   {weapon.type}
-            <b>price:</b>   {weapon.cost}
-            <b>blacksmith:</b>   {weapon.blacksmith}
-            <b>description:</b>   {weapon.description} </li>)}
-        </ul>
+          key={weapon._id}
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src={weapon.image} alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{weapon.name}</h5>
+              <p class="card-text">{weapon.description}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{weapon.cost}</li>
+              <li class="list-group-item">{weapon.blacksmith}</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">{weapon.email}</a>
+            </div>
+          </div>
 
-      </div>
     )
   }
 
