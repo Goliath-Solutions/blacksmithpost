@@ -1,10 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
 import WeaponForm from './components/weaponForm.jsx'
-import WeaponView from './components/weaponView.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import DeleteWeapon from './components/DeleteWeapon.jsx'
+import SingleItem from './components/SingleItem.jsx'
+import ViewItems from './components/ViewItems.jsx'
 
 class App extends React.Component {
   constructor(props){
@@ -13,7 +14,7 @@ class App extends React.Component {
     this.state = {
       weapons:[],
       deleteitem:'',
-      viewState:'weaponForm',
+      viewState:'WeaponForm',
       isLoading:false,
     }
   }
@@ -27,11 +28,11 @@ class App extends React.Component {
   }
 
   buyItem(){
-    this.setState({viewState:'weaponView'});
+    this.setState({viewState:'ViewItems'});
   }
 
   sellItem(){
-    this.setState({viewState:'weaponForm'});
+    this.setState({viewState:'WeaponForm'});
   }
 
 
@@ -60,8 +61,8 @@ class App extends React.Component {
         </div>
         </nav>
 
-        {this.state.viewState === 'weaponForm' && <WeaponForm />}
-        {this.state.viewState === 'weaponView' && <WeaponView />}
+        {this.state.viewState === 'WeaponForm' && <WeaponForm />}
+        {this.state.viewState === 'ViewItems' && <ViewItems items={this.state.weapons} />}
         <Footer />
       </div>
     );

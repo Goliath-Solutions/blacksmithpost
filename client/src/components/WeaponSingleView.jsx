@@ -15,6 +15,6 @@ const weaponSingleView = (props) => (
   </Card>
 )
 
-export default weaponSingleView
+export default weaponSingleView;
 
 

@@ -1,0 +1,121 @@
+[
+  {
+    "type" : "Broad Sword",
+    "description" : "If it's semi-historical/realistic game, then it's the iconic zweihander or the broad Sword type. Works more or less like a clumsier bastard (you can only use it 2 handed), may have reach benefits. ",
+    "cost" : 531,
+    "email" : "gandalf@hotmail.com",
+    "condition" : "good",
+    "blacksmith" : "Sam Smith",
+    "material" : "steel",
+    "image" : "http://i.imgur.com/P3c0a.gif",
+    "active" : true
+  },
+
+  {
+    "type" : "Newb Sword",
+    "description" : "test sword",
+    "cost" : 7,
+    "email" : "squire@hotmail.com",
+    "condition" : "old",
+    "blacksmith" : "Grandma",
+    "material" : "iron",
+    "image" : "http://www.coldsteel.com/media/catalog/product/cache/1/thumbnail/960x/17f82f742ffe127f42dca9de82fb58b1/8/8/88nor.jpg",
+    "active" : true
+  },
+
+  {
+    "type" : "Phoenix Spear",
+    "description" : "a spear forged from the ashes of a phoenix",
+    "cost" : 999999,
+    "email" : "BrightOrangeSam@hotmail.com",
+    "condition" : "New",
+    "blacksmith" : "Alarian",
+    "material" : "flame steel",
+    "image" : "https://vignette.wikia.nocookie.net/nier/images/a/a1/PhoenixSpearClean.png/revision/latest?cb=20170718134412",
+    "active" : true
+  },
+
+  {
+    "type" : "Newb Sword",
+    "description" : "test sword",
+    "cost" : 7,
+    "email" : "squire@hotmail.com",
+    "condition" : "old",
+    "blacksmith" : "Grandma",
+    "material" : "iron",
+    "image" : "http://www.coldsteel.com/media/catalog/product/cache/1/thumbnail/960x/17f82f742ffe127f42dca9de82fb58b1/8/8/88nor.jpg",
+    "active" : true
+  },
+
+  {
+    "type" : "Phoenix Spear",
+    "description" : "a spear forged from the ashes of a phoenix",
+    "cost" : 999999,
+    "email" : "BrightOrangeSam@hotmail.com",
+    "condition" : "New",
+    "blacksmith" : "Alarian",
+    "material" : "flame steel",
+    "image" : "https://vignette.wikia.nocookie.net/nier/images/a/a1/PhoenixSpearClean.png/revision/latest?cb=20170718134412",
+    "active" : true
+  },
+
+  {
+    "type" : "testing sword",
+    "description" : "test sword",
+    "cost" : 999999,
+    "email" : "gandalf@hotmail.com",
+    "condition" : "test sword",
+    "blacksmith" : "test sword",
+    "material" : "test sword",
+    "image" : "http://i.imgur.com/P3c0a.gif",
+    "active" : true
+  },
+
+  {
+    "type" : "Phoenix Spear",
+    "description" : "a spear forged from the ashes of a phoenix",
+    "cost" : 999999,
+    "email" : "BrightOrangeSam@hotmail.com",
+    "condition" : "New",
+    "blacksmith" : "Alarian",
+    "material" : "flame steel",
+    "image" : "https://vignette.wikia.nocookie.net/nier/images/a/a1/PhoenixSpearClean.png/revision/latest?cb=20170718134412",
+    "active" : true
+  },
+
+  {
+    "type" : "Oblivion axe",
+    "description" : "An axe to decimate your enemies",
+    "cost" : 4532,
+    "email" : "darkLordJeff@hotmail.com",
+    "condition" : "worn",
+    "blacksmith" : "Nethedza the great",
+    "material" : "green oynx",
+    "image" : "https://vignette.wikia.nocookie.net/elderscrolls/images/c/c7/Glass_battleaxe_skyrim.png/revision/latest/scale-to-width-down/1000?cb=20130120152447",
+    "active" : true
+  },
+
+  {
+    "type" : "Newb Sword",
+    "description" : "test sword",
+    "cost" : 7,
+    "email" : "squire@hotmail.com",
+    "condition" : "old",
+    "blacksmith" : "Grandma",
+    "material" : "iron",
+    "image" : "http://www.coldsteel.com/media/catalog/product/cache/1/thumbnail/960x/17f82f742ffe127f42dca9de82fb58b1/8/8/88nor.jpg",
+    "active" : true
+  },
+
+  {
+    "type" : "The_Dark_Dragon_Blade",
+    "description" : "from the swamp of Darkness",
+    "cost" : 999999,
+    "email" : "Dragonboi@hotmail.com",
+    "condition" : "Like New",
+    "blacksmith" : "hatori hanzo",
+    "material" : "dragonsteel",
+    "image" : "https://vignette.wikia.nocookie.net/ninjagaiden/images/7/76/The_Dark_Dragon_Blade.jpg/revision/latest?cb=20120929210744",
+    "active" : true
+  }
+]

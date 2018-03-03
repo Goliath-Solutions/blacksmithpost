@@ -63,78 +63,72 @@ class WeaponForm extends React.Component {
         <div className="WeaponForm">
           <h1>The Black Smith Post</h1>
           <form>
-        <label>
-          Item's Name:
-          <input
+          <div className="form-group">
+          <label for="formGroupExampleInput">Item's Name:</label>
+          <input className="form-control"
             name="type"
             type="string"
             value={this.state.type}
             onChange={e => this.change(e)} />
-        </label>
-        <br />
-        <label>
-           Description:
-          <input
+        </div>
+        <div className="form-group">
+        <label for="formGroupExampleInput">Description:</label>
+          <input className="form-control"
             name="description"
             type="string"
             value={this.state.description}
             onChange={e => this.change(e)} />
-        </label>
-        <br />
-        <label>
-           Price:
-          <input
+        </div>
+        <div className="form-group">
+        <label for="formGroupExampleInput">Price:</label>
+          <input className="form-control"
             name="cost"
             type="number"
             value={this.state.cost}
             onChange={e => this.change(e)} />
-        </label>
-        <br />
-        <label>
-           Condition:
-          <input
+        </div>
+        <div className="form-group">
+        <label for="formGroupExampleInput">Condition:</label>
+        <input className="form-control"
             name="condition"
             type="string"
             value={this.state.condition}
             onChange={e => this.change(e)} />
-        </label>
-        <br />
-        <label>
-          Blacksmith:
-          <input
+        </div>
+        <div className="form-group">
+          <label for="formGroupExampleInput">Blacksmith:</label>
+          <input className="form-control"
             name="blacksmith"
             type="string"
             value={this.state.blacksmith}
             onChange={e => this.change(e)} />
-        </label>
-        <br />
-        <label>
-          Material:
-          <input
+        </div>
+        <div className="form-group">
+        <label for="formGroupExampleInput">Material:</label>
+          <input className="form-control"
             name="material"
             type="string"
             value={this.state.material}
             onChange={e => this.change(e)} />
-        </label>
-        <br />
-
-        <label>
-          Seller Email:
-          <input
+            </div>
+        <div className="form-group">
+        <label for="formGroupExampleInput">Seller Email:</label>
+          <input className="form-control"
             name="email"
             type="string"
             value={this.state.email}
             onChange={e => this.change(e)} />
-        </label>
-        <br />
-
-          <div className="form-group">
-          <label for="exampleFormControlFile1">Upload Image</label>
-          <input type="file" className="form-control-file" id="exampleFormControlFile1" />
-          </div>
-        <br />
+        </div>
+        <div className="form-group">
+        <label for="formGroupExampleInput">Image URL:</label>
+          <input className="form-control"
+            name="image"
+            type="string"
+            value={this.state.image}
+            onChange={e => this.change(e)} />
+        </div>
         <h4>List thee item my lord:</h4>
-          <button className="btn btn-primary btn-lg active" onClick={() => this.onSubmit()}>List Weapon</button>
+        <button className="btn btn-primary btn-lg active" onClick={() => this.onSubmit()}>List Weapon</button>
       </form>
 
 
