@@ -5,11 +5,10 @@ import {Component} from 'react';
 
 const SingleItem = ({item}) => (
 
-  <div className="card">
-    <img className="card-img-top" src={item.image}/>
+  <div className="card" style={{flex: 1, minWidth:300, maxWidth:400}}>
+    <img className="card-img-top" src={item.image} alt="Card image cap" />
     <div className="card-body">
-    <h5 className="card-title">{item.type}</h5>
-    <h6>{item.price}</h6>
+    <h5 className="card-title">{item.type} { item.cost}</h5>
     <p className="card-text">{item.description}</p>
     </div>
   </div>
@@ -17,12 +16,6 @@ const SingleItem = ({item}) => (
 )
 
 window.SingleItem = SingleItem
-
-
-
-
-
-
 
 
 

@@ -16,20 +16,13 @@ app.use(express.static(__dirname + '/../client/dist'));
 //app.use(history());
 
 
-app.post('/api/createWeapon', function (req, res) {
-  database.createWeapon(req.body)
-
-  res.send('weapon created')
-});
-
-
 app.listen(process.env.PORT || 3000, function () {
   console.log('listening on port 3000!');
 });
 
 //request to view all items of type
 
-app.get('/api/allWeapons', function (req, res) {
+app.get('/api/items', function (req, res) {
  database.allWeapons(function (err, data){
   if (err){
     res.sendStatus(500 +"cant find item");
@@ -39,16 +32,14 @@ app.get('/api/allWeapons', function (req, res) {
  })
 })
 
-
 //request to add item to database
 
-app.post('/api/weaponForm', function (req, res){
+app.post('/api/itemForm', function (req, res){
     console.log(req.body +" this req body weapform");
   database.createWeapon(req.body);
     res.sendStatus(200);
 
 })
-
 
 app.post('/api/deleteWeapon', function (req, res){
   console.log(req.body.type +" req body delete")

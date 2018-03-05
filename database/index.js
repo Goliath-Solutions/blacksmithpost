@@ -20,24 +20,15 @@ var weaponSchema = mongoose.Schema({
   blacksmith: String,
   material: String,
   imagemain: String,
+  class: String,
+  subclass: String,
   active: Boolean
 });
 
-var armorSchema = mongoose.Schema({
-  type: String,
-  description: String,
-  cost: Number,
-  email: String,
-  condition: String,
-  blacksmith: String,
-  material: String,
-  image: String,
-  active: Boolean
-});
+
 
 
 var weapon = module.exports = mongoose.model('weapon', weaponSchema);
-var armor = module.exports = mongoose.model('armor', armorSchema);
 
 //create a weapon listing
 var createWeapon = function (data) {

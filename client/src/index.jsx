@@ -1,20 +1,21 @@
 import React from 'react';
 import {render} from 'react-dom';
-import WeaponForm from './components/weaponForm.jsx'
-import Header from './components/Header.jsx'
+import ItemForm from './components/ItemForm.jsx'
 import Footer from './components/Footer.jsx'
 import DeleteWeapon from './components/DeleteWeapon.jsx'
 import SingleItem from './components/SingleItem.jsx'
 import ViewItems from './components/ViewItems.jsx'
+import Login from './components/Login.jsx'
+
 
 class App extends React.Component {
   constructor(props){
     super(props)
 
     this.state = {
-      weapons:[],
+      items:[],
       deleteitem:'',
-      viewState:'WeaponForm',
+      viewState:'ItemForm',
       isLoading:false,
     }
   }
@@ -22,9 +23,9 @@ class App extends React.Component {
     componentDidMount(){
     this.setState({isLoading: true});
 
-    fetch('/api/allWeapons')
+    fetch('/api/items')
     .then(response => response.json())
-    .then(data => this.setState({ weapons: data, isloading:false}));
+    .then(data => this.setState({ items: data, isloading:false}));
   }
 
   buyItem(){
@@ -32,9 +33,11 @@ class App extends React.Component {
   }
 
   sellItem(){
-    this.setState({viewState:'WeaponForm'});
+    this.setState({viewState:'ItemForm'});
   }
-
+  login(){
+    this.setState({viewState:'Login'});
+  }
 
   render () {
     return (
@@ -49,20 +52,21 @@ class App extends React.Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <button className="btn btn-outline-primary" onClick={() => this.buyItem()}>Browse</button>
+              <button className="btn btn-outline-primary btn-lg" onClick={() => this.buyItem()}>Browse</button>
             </li>
             <li className="nav-item">
-              <button className="btn btn-outline-primary" onClick={() => this.sellItem()}>Sell</button>
+              <button className="btn btn-outline-primary btn-lg" onClick={() => this.sellItem()}>Sell</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="#">Disabled</a>
+              <button className="btn btn-outline-info btn-lg" onClick={() => this.login()}>Login</button>
             </li>
           </ul>
         </div>
         </nav>
 
-        {this.state.viewState === 'WeaponForm' && <WeaponForm />}
-        {this.state.viewState === 'ViewItems' && <ViewItems items={this.state.weapons} />}
+        {this.state.viewState === 'ItemForm' && <ItemForm />}
+        {this.state.viewState === 'ViewItems' && <ViewItems items={this.state.items} />}
+        {this.state.viewState === 'Login' && <Login />}
         <Footer />
       </div>
     );

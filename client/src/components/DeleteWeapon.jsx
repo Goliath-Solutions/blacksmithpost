@@ -27,7 +27,7 @@ class DeleteWeapon extends React.Component {
 
 
     $.ajax({
-      url: '/api/deleteWeapon',
+      url: '/api/deleteItem',
       type: 'POST',
       data: deleteData,
       success: function(data) {

@@ -4,11 +4,12 @@ import {Component} from 'react';
 import $ from 'jquery';
 
 
-class WeaponForm extends React.Component {
+class ItemForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      class:'',
       type: '',
       description:'',
       cost: '',
@@ -31,7 +32,7 @@ class WeaponForm extends React.Component {
   onSubmit() {
 
 
-    var weaponData = {
+    var itemData = {
       type: this.state.type,
       description:this.state.description,
       cost: this.state.cost,
@@ -43,12 +44,12 @@ class WeaponForm extends React.Component {
     }
 
     $.ajax({
-      url: '/api/weaponForm',
+      url: '/api/itemForm',
  //     dataType: 'json',
       type: 'POST',
-      data: weaponData,
+      data: itemData,
       success: function(data) {
-          alert("your weapon post is now live")
+          alert("your post is now live")
       },
       error: function(err){
         console.log('errror in ajax', err);
@@ -60,11 +61,11 @@ class WeaponForm extends React.Component {
 
     render () {
       return (
-        <div className="WeaponForm">
+        <div className="ItemForm">
           <h1>The Black Smith Post</h1>
           <form>
           <div className="form-group">
-          <label for="formGroupExampleInput">Item's Name:</label>
+          <label><h5>Item's Name:</h5></label>
           <input className="form-control"
             name="type"
             type="string"
@@ -72,7 +73,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </div>
         <div className="form-group">
-        <label for="formGroupExampleInput">Description:</label>
+        <label><h5>Description:</h5></label>
           <input className="form-control"
             name="description"
             type="string"
@@ -80,7 +81,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </div>
         <div className="form-group">
-        <label for="formGroupExampleInput">Price:</label>
+        <label><h5>Price:</h5></label>
           <input className="form-control"
             name="cost"
             type="number"
@@ -88,7 +89,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </div>
         <div className="form-group">
-        <label for="formGroupExampleInput">Condition:</label>
+        <label><h5>Condition:</h5></label>
         <input className="form-control"
             name="condition"
             type="string"
@@ -96,7 +97,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </div>
         <div className="form-group">
-          <label for="formGroupExampleInput">Blacksmith:</label>
+          <label><h5>Blacksmith:</h5></label>
           <input className="form-control"
             name="blacksmith"
             type="string"
@@ -104,7 +105,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </div>
         <div className="form-group">
-        <label for="formGroupExampleInput">Material:</label>
+        <label><h5>Material:</h5></label>
           <input className="form-control"
             name="material"
             type="string"
@@ -112,7 +113,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
             </div>
         <div className="form-group">
-        <label for="formGroupExampleInput">Seller Email:</label>
+        <label><h5>Seller Email:</h5></label>
           <input className="form-control"
             name="email"
             type="string"
@@ -120,7 +121,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </div>
         <div className="form-group">
-        <label for="formGroupExampleInput">Image URL:</label>
+        <label><h5>Image URL:</h5></label>
           <input className="form-control"
             name="image"
             type="string"
@@ -128,7 +129,7 @@ class WeaponForm extends React.Component {
             onChange={e => this.change(e)} />
         </div>
         <h4>List thee item my lord:</h4>
-        <button className="btn btn-primary btn-lg active" onClick={() => this.onSubmit()}>List Weapon</button>
+        <button className="btn btn-primary btn-lg btn-block" onClick={() => this.onSubmit()}>List Item</button>
       </form>
 
 
@@ -141,7 +142,7 @@ class WeaponForm extends React.Component {
 
 
 
-export default WeaponForm;
+export default ItemForm;
 
 
 
