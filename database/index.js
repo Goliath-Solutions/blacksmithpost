@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/blacksmith');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/blacksmith');
 
 var db = mongoose.connection;
 
