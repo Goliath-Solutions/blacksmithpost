@@ -10,7 +10,7 @@ class ItemForm extends React.Component {
 
     this.state = {
       class:'',
-      type: '',
+      name: '',
       description:'',
       cost: '',
       email:'',
@@ -22,7 +22,7 @@ class ItemForm extends React.Component {
 
   }
 
-
+//function that holds state based upon input data collected in form before submission
   change(e){
     this.setState({
       [e.target.name]: e.target.value
@@ -30,10 +30,10 @@ class ItemForm extends React.Component {
   }
 
   onSubmit() {
-
+//stores data on submission to send via ajax call
 
     var itemData = {
-      type: this.state.type,
+      name: this.state.name,
       description:this.state.description,
       cost: this.state.cost,
       email:this.state.email,
@@ -58,7 +58,7 @@ class ItemForm extends React.Component {
 
   };
 
-
+//form to collect data
     render () {
       return (
         <div className="ItemForm">
@@ -67,9 +67,9 @@ class ItemForm extends React.Component {
           <div className="form-group">
           <label><h5>Item's Name:</h5></label>
           <input className="form-control"
-            name="type"
+            name="name"
             type="string"
-            value={this.state.type}
+            value={this.state.name}
             onChange={e => this.change(e)} />
         </div>
         <div className="form-group">

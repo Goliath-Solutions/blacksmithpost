@@ -2,6 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 import $ from 'jquery';
 
+//currently not in use but works to delete a item based upon name
 
 class DeleteWeapon extends React.Component {
   constructor(props){
@@ -23,7 +24,7 @@ class DeleteWeapon extends React.Component {
   }
   onSubmit(event){
 
-    var deleteData = { type: this.state.deleteitem }
+    var deleteData = { name: this.state.deleteitem }
 
 
     $.ajax({
@@ -50,7 +51,7 @@ class DeleteWeapon extends React.Component {
         <label>
         <input
         name="deleteitem"
-        type="string"
+        name="string"
         value={this.state.deleteitem}
         onChange={event => this.handlechange(event)} />
         </label>

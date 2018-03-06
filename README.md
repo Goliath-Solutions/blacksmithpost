@@ -1,37 +1,36 @@
-# blacksmithpost
+# Blacksmithpost
 
-Pithy project description
+a app to buy and sell items blacksmithing goods over a online marketplace
 
-Team
-Product Owner: teamMember
-Scrum Master: teamMember
-Development Team Members: teamMember, teamMember
-Table of Contents
-Usage
-Requirements
-Development
-Installing Dependencies
-Tasks
-Team
-Contributing
-Usage
-Some usage instructions
+##Team
+Joe Ford
 
-Requirements
+
+##Requirements:
+
 Node 0.10.x
-Redis 2.6.x
-Postgresql 9.1.x
-etc
-etc
-Development
-Installing Dependencies
+mongoDB 9.1.x
+
+
+##Built With
+
+Mongoose, Express, React, Node JS
+
+##Installing Dependencies
+
 From within the root directory:
 
-sudo npm install -g bower
-npm install
-bower install
-Roadmap
-View the project roadmap here
+
+1. npm install
+
+2. node itemSeed.js to populate the database with seed data located in predata.json
+
+##Usage:
+
+1. npm run react-dev (to start web pack)
+2. npm run start to go live.
+3. npm run start-dev to start developer mode
 
 Contributing
 See CONTRIBUTING.md for contribution guidelines.
+

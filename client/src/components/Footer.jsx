@@ -1,5 +1,7 @@
 import React from 'react';
 
+//was not able to get the social media buttons to work
+//basic footer otherwise, about and legal page need to be done.
 const Footer = () => (
     <div>
       <footer className="page-footer font-small bg-light">

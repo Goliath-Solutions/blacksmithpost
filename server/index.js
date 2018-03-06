@@ -1,12 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var database = require('../database/index.js');
-//var history = require('connect-history-api-fallback');
 
 var app = express();
 
-
-
+//to view data in body of api calls
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -23,7 +21,7 @@ app.listen(process.env.PORT || 3000, function () {
 //request to view all items of type
 
 app.get('/api/items', function (req, res) {
- database.allWeapons(function (err, data){
+ database.allItems(function (err, data){
   if (err){
     res.sendStatus(500 +"cant find item");
   } else {
@@ -36,30 +34,16 @@ app.get('/api/items', function (req, res) {
 
 app.post('/api/itemForm', function (req, res){
     console.log(req.body +" this req body weapform");
-  database.createWeapon(req.body);
+  database.createItem(req.body);
     res.sendStatus(200);
 
 })
 
-app.post('/api/deleteWeapon', function (req, res){
+//api call to delete a item not in use but works
+app.post('/api/deleteItem', function (req, res){
   console.log(req.body.type +" req body delete")
-  database.deleteWeapon(req.body);
+  database.deleteItem(req.body);
 
   res.sendStatus(200);
 });
-/*
-app.get('/api/allArmor', function (req, res) {})
-app.post('/api/armorForm', function (req, res) {})
-// request to view a single item
-app.get('/api/singleArmor', function (req, res) {})
-app.get('/api/singleWeapon', function (req, res) {})
 
-// request to delete a single item made by owner of listing
-app.delete('/api/removeWeapon', function (req, res) {})
-app.delete('/api/removeArmor', function (req, res) {})
-
-//request to update a single item made by owner of listing
-app.update('/api/updateWeapon', function (req, res) {})
-app.update('/api/updateArmor', function (req, res) {})
-
-*/

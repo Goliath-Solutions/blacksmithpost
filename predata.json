@@ -1,6 +1,6 @@
 [
   {
-    "type" : "Broad Sword",
+    "name" : "Broad Sword",
     "description" : "If it's semi-historical/realistic game, then it's the iconic zweihander or the broad Sword type. Works more or less like a clumsier bastard (you can only use it 2 handed), may have reach benefits. ",
     "cost" : 531,
     "email" : "gandalf@hotmail.com",
@@ -14,7 +14,7 @@
   },
 
   {
-    "type" : "Greek Corinthian Helmet",
+    "name" : "Greek Corinthian Helmet",
     "description" : "Going back to classic Greek style, the Greek Corinthian Helmet is truly a sight to behold.",
     "cost" : 155,
     "email" : "squire@hotmail.com",
@@ -28,7 +28,7 @@
   },
 
   {
-    "type" : "Phoenix Spear",
+    "name" : "Phoenix Spear",
     "description" : "a spear forged from the ashes of a phoenix",
     "cost" : 999999,
     "email" : "BrightOrangeSam@hotmail.com",
@@ -42,7 +42,7 @@
   },
 
   {
-    "type" : "Newb Sword",
+    "name" : "Newb Sword",
     "description" : "test sword",
     "cost" : 7,
     "email" : "squire@hotmail.com",
@@ -56,7 +56,7 @@
   },
 
   {
-    "type" : "Dark Iron Breastplate",
+    "name" : "Dark Iron Breastplate",
     "description" : "classic dark iron breastplate",
     "cost" : 999999,
     "email" : "tinydwarfguy@hotmail.com",
@@ -70,7 +70,7 @@
   },
 
   {
-    "type" : "Full Light Iron Suit",
+    "name" : "Full Light Iron Suit",
     "description" : "Paladin armor style gear fully functional, only wore once in battle",
     "cost" : 1450,
     "email" : "knightman@hotmail.com",
@@ -84,7 +84,7 @@
   },
 
   {
-    "type" : "Phoenix Spear",
+    "name" : "Phoenix Spear",
     "description" : "a spear forged from the ashes of a phoenix",
     "cost" : 999999,
     "email" : "BrightOrangeSam@hotmail.com",
@@ -98,7 +98,7 @@
   },
 
   {
-    "type" : "Oblivion axe",
+    "name" : "Oblivion axe",
     "description" : "An axe to decimate your enemies",
     "cost" : 4532,
     "email" : "darkLordJeff@hotmail.com",
@@ -112,7 +112,7 @@
   },
 
   {
-    "type" : "Roman Breast Plate",
+    "name" : "Roman Breast Plate",
     "description" : "Roman style breastplate made in 1705",
     "cost" : 7,
     "email" : "sirMaxxy@hotmail.com",
@@ -126,7 +126,7 @@
   },
 
   {
-    "type" : "The_Dark_Dragon_Blade",
+    "name" : "The_Dark_Dragon_Blade",
     "description" : "from the swamp of Darkness",
     "cost" : 999999,
     "email" : "Dragonboi@hotmail.com",
